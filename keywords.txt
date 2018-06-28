@@ -1,4 +1,4 @@
-trueforSeconds KEYWORD1
-hasElapsedTimer KEYWORD1
-hasElapsedOrNotBeenStartedSec KEYWORD1
-startTimer KEYWORD1
+trueforSeconds KEYWORD2
+hasElapsedTimer KEYWORD2
+hasElapsedOrNotBeenStartedSec KEYWORD2
+startTimer KEYWORD2
