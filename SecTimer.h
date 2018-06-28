@@ -19,7 +19,7 @@ public:
 		} ms_timer_t;
 private: 
 		ms_timer_t _timer;
-		bool hasBeenStartedSecTimer(void);
+		bool _hasBeenStartedSecTimer(void);
 
 }
 
