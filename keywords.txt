@@ -1,0 +1,4 @@
+trueforSeconds KEYWORD1
+hasElapsedTimer KEYWORD1
+hasElapsedOrNotBeenStartedSec KEYWORD1
+startTimer KEYWORD1
