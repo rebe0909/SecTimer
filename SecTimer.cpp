@@ -9,6 +9,7 @@ SecTimer::SecTimer()
 {
 	_timer.starttime = 0;
 	_timer.stoptime = 0;
+	_timer.interval = 0;
 	_timer.running = false;
 }
 
