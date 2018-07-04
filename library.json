@@ -1,0 +1,23 @@
+{
+  "name": "SecTimer",
+  "keywords": "Second, timer, second, delay",
+  "description": "A simple Timer for Second Delays",
+  "homepage": "https://github.com/rebe0909/SecTimer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rebe0909/SecTimer.git"
+  },
+  "version": "1.00.0",
+  "authors": {
+    "name": "Reinhard",
+    "url": "https://github.com/rebe0909/SecTimer"
+  },
+  "exclude": [
+    "fuzzing",
+    "scripts",
+    "test",
+    "third-party"
+  ],
+  "frameworks": "arduino",
+  "platforms": "*"
+}
