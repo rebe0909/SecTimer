@@ -7,8 +7,8 @@
 
 SecTimer::SecTimer()
 {
-	_timer.starttime = 0;
-	_timer.stoptime = 0;
+	_timer.starttime_ms = 0;
+	_timer.stoptime_ms = 0;
 	_timer.interval = 0;
 	_timer.running = false;
 }
