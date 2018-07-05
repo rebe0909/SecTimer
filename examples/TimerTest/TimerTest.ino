@@ -10,8 +10,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-bool timer_elapsed = timer[0].hasElapsedTimer();
-  if(timer_elapsed)
+bool timerElapsed = timer[0].hasElapsedTimer();
+  if(timerElapsed)
   {
     //Do_something....
   }
