@@ -6,6 +6,7 @@
 class SecTimer {
 
 public:
+		SecTimer();
 		bool trueforSeconds (bool bedingung, int sek);
 		bool hasElapsedTimer (void);
 		bool hasElapsedOrNotBeenStartedSec (void);
