@@ -11,6 +11,7 @@ public:
 		bool hasElapsedTimer (void);
 		bool hasElapsedOrNotBeenStartedSec (void);
 		void startTimer(int Sec);
+		void stopTimer(int Sec);
 		typedef struct
 		{
 			unsigned long starttime_ms;
