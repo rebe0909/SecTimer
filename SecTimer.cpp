@@ -11,7 +11,7 @@ SecTimer::SecTimer()
 	_timer.interval = 0;
 	_timer.running = false;
 }
-void SecTimer::stopTimer(int Sec)
+void SecTimer::stopTimer(void)
 {
 	_timer.running = false;
 }
