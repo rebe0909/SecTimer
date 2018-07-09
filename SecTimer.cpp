@@ -4,7 +4,6 @@
 #include "Arduino.h"
 #include "SecTimer.h"
 
-
 SecTimer::SecTimer()
 {
 	_timer.starttime_ms = 0;
@@ -16,7 +15,6 @@ SecTimer::SecTimer()
 bool SecTimer::hasElapsedTimer (void)
 {
 	return _hasBeenStartedSecTimer () && _msTimerGetTimeRemaining() == 0;
-
 }
 
 void SecTimer::startTimer(int Sec)
@@ -29,7 +27,7 @@ void SecTimer::startTimer(int Sec)
 
 bool SecTimer::_hasBeenStartedSecTimer (void)
 {
-	return _timer.starttime_ms != _timer.stoptime_ms || _timer.running;
+	return _timer.interval != 0 || _timer.running;
 }
 
 unsigned long SecTimer::_msTimerGetTimeRemaining(void)
@@ -38,7 +36,6 @@ unsigned long SecTimer::_msTimerGetTimeRemaining(void)
 	if((_current - _timer.starttime_ms) > _timer.interval)
 	{
 		_timer.running = false;
-		_timer.interval = 0;
 		return 0;
 	}
 	else
