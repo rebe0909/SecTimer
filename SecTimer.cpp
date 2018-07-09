@@ -11,6 +11,10 @@ SecTimer::SecTimer()
 	_timer.interval = 0;
 	_timer.running = false;
 }
+void SecTimer::stopTimer(int Sec)
+{
+	_timer.running = false;
+}
 
 bool SecTimer::hasElapsedTimer (void)
 {
@@ -27,13 +31,15 @@ void SecTimer::startTimer(int Sec)
 
 bool SecTimer::_hasBeenStartedSecTimer (void)
 {
-	return _timer.interval != 0 || _timer.running;
+	return _timer.interval != 0;
 }
 
 unsigned long SecTimer::_msTimerGetTimeRemaining(void)
 {
+	if (!_timer.running) return 0;
+	
 	unsigned long _current = millis();
-	if((_current - _timer.starttime_ms) > _timer.interval)
+	if(_timer.interval == 0 || (_current - _timer.starttime_ms) > _timer.interval )
 	{
 		_timer.running = false;
 		return 0;
