@@ -18,7 +18,17 @@ void SecTimer::stopTimer(void)
 
 bool SecTimer::hasElapsedTimer (void)
 {
-	return _hasBeenStartedSecTimer () && _msTimerGetTimeRemaining() == 0;
+	return _msTimerGetTimeRemaining() == 0;
+}
+
+bool SecTimer::hasElapsedAndStarted (void)
+{
+	return _msTimerGetTimeRemaining() == 0 && _hasBeenStartedSecTimer ();
+}
+
+bool SecTimer::hasElapsedOrNotBeenStarted (void)
+{
+	return _msTimerGetTimeRemaining() == 0 || !_hasBeenStartedSecTimer;
 }
 
 void SecTimer::startTimer(int Sec)

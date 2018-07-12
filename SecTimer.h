@@ -9,7 +9,8 @@ public:
 		SecTimer();
 		bool trueforSeconds (bool bedingung, int sek);
 		bool hasElapsedTimer (void);
-		bool hasElapsedOrNotBeenStartedSec (void);
+		bool hasElapsedOrNotBeenStarted (void);
+		bool hasElapsedAndStarted (void);
 		void startTimer(int Sec);
 		void stopTimer(void);
 		typedef struct
