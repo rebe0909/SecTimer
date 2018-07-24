@@ -28,7 +28,7 @@ bool SecTimer::hasElapsedAndStarted (void)
 
 bool SecTimer::hasElapsedOrNotBeenStarted (void)
 {
-	return _msTimerGetTimeRemaining() == 0 || !_hasBeenStartedSecTimer;
+	return _msTimerGetTimeRemaining() == 0 || !_hasBeenStartedSecTimer();
 }
 
 void SecTimer::startTimer(int Sec)
@@ -47,7 +47,7 @@ bool SecTimer::_hasBeenStartedSecTimer (void)
 unsigned long SecTimer::_msTimerGetTimeRemaining(void)
 {
 	if (!_timer.running) return 0;
-	
+
 	unsigned long _current = millis();
 	if(_timer.interval == 0 || (_current - _timer.starttime_ms) > _timer.interval )
 	{
